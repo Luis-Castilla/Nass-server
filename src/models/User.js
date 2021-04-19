@@ -7,14 +7,28 @@ const {
 } = mongosee;
 
 const userSchema = new Schema({
-  email: {type: String, required: true},
+  email: { type: String, required: true },
   password: String,
   fullName: String,
   signupDate: {
     type: Date,
     default: Date.now()
   },
-  lastLogin: Date
+  lastLogin: Date,
+  files_shared_with_me: [
+    {
+      type: Schema.Types.ObjectId, //tipo de dato referencia con el id
+      ref: "Files", // relacion al modelo de datos User
+    }
+  ],
+  videos_shared_with_me: [
+    {
+      type: Schema.Types.ObjectId, //tipo de dato referencia con el id
+      ref: "Videos", // relacion al modelo de datos User
+    }
+  ],
+  max_storage_size: Number,
+  actual_storage_size: Number
 })
 
 userSchema.pre('save', function (next) {
