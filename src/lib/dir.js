@@ -2,24 +2,19 @@ const fs = require('fs');
 
 const checkDir = (storagePath) => {
     try {
-        fs.access(storagePath, (error) => {
-            if (error) {
-                return false;
-            }
-        });
-        return true;
-    } catch (error) {
+        fs.accessSync(storagePath)
         return false;
+    } catch (error) {
+        return true;
     }
 
 }
 
 const createDir = (storagePath) => {
     try {
-        console.log(storagePath);
         fs.mkdirSync(storagePath);
-        console.log('error?');
     } catch (error) {
+        console.log('error?');
         return error;
     }
 }

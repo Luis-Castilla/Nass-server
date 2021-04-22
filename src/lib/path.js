@@ -1,5 +1,5 @@
 const path = require('path');
-const storage = require('../utils/storage');
+const storage = require('../storage');
 
 const slash = process.platform === 'win32' ? '\\' : '/';
 

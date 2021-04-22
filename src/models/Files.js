@@ -4,6 +4,7 @@ const filesSchema = new Schema(
     {
         file_name: String,
         file_url: String,
+        file_size: String,
         file_owner: {
             type: Schema.Types.ObjectId, //tipo de dato referencia con el id
             ref: "Users", // relacion al modelo de datos User

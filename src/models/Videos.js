@@ -4,6 +4,8 @@ const videosSchema = new Schema(
     {
         video_name: String,
         video_url: String,
+        video_duration: String,
+        video_size: String,
         video_owner: {
             type: Schema.Types.ObjectId, //tipo de dato referencia con el id
             ref: "Users", // relacion al modelo de datos User

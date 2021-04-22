@@ -52,7 +52,7 @@ app.all('*', function (req, res, next) {
 
 // Storage
 const storage = multer.diskStorage({
-    destination: path.join(__dirname, "public/img"),
+    destination: path.join(__dirname, "public/uploads"),
     filename: (req, file, cb) => {
         cb(null, uuidv4() + path.extname(file.originalname));
     },
