@@ -1,6 +1,6 @@
 'use strict'
 
-const User = require('../models/user');
+const User = require('../models/User');
 const service = require('../services/userService');
 
 function signUp (req, res) {
