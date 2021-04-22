@@ -1,4 +1,4 @@
-const VideosService = require("../services/VideosServices.js");
+const VideosService = require("../services/videosServices.js");
 const fs = require("fs");
 
 // Create Videos
